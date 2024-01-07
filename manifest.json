@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Timeout Setter",
+    "version": "1.0",
+    "description": "Sets a timeout for a specific element on the Wizz Air website.",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_title": "Set Timeout"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://wizzair.com/en-gb/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
